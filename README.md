@@ -1,4 +1,9 @@
 # Actividad 9: Docker Compose
 
 ## Integrantes del equipo
-* Angel Navarro (y los nombres de tus compañeros)
+Luis Alejandro Prado Rodriguez 
+Joel Damian Arriaga Gutierrez
+Angel Gallegos Nava
+Leonardo David Argüello Pérez 
+Airis victoria Rodríguez Cardona
+
