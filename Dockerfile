@@ -1,9 +1,10 @@
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
+RUN apk add --no-cache git
 WORKDIR /app
-RUN npx -y @angular/cli@18 new practica-angular --defaults --skip-git
-WORKDIR /app/practica-angular
+RUN git clone https://github.com/angelnav9559-ship-it/practica_5-angular.git .
+RUN npm install
 RUN npm run build -- --configuration production
-RUN mkdir -p /salida && cp -r $(dirname $(find dist -name "index.html" | head -n 1))/* /salida/
+RUN mkdir -p /salida && cp -r $(dirname $(find /app/dist -name "index.html" | head -n 1))/* /salida/
 
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
