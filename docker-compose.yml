@@ -1,0 +1,12 @@
+services:
+  angular-nginx-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        REPO_URL: "https://github.com"
+    image: practica-angular-nginx:1.0
+    container_name: contenedor-angular-nginx
+    ports:
+      - "8080:80"
+    restart: unless-stopped
